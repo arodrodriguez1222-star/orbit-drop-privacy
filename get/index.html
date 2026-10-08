@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orbit 99 – Free on Android</title>
+<meta name="description" content="One ship. 99 planets. How far can you orbit? Orbit 99 is free on Google Play.">
+<meta name="theme-color" content="#05060f">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Orbit 99 – Free on Android">
+<meta property="og:description" content="One ship. 99 planets. How far can you orbit?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arodrodriguez1222-star.github.io/orbit-drop-privacy/get/">
+<meta property="og:image" content="https://arodrodriguez1222-star.github.io/orbit-drop-privacy/get/icon-256.jpg">
+<meta property="og:image:width" content="256">
+<meta property="og:image:height" content="256">
+<meta property="og:image:alt" content="Orbit 99 game icon">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/jpeg" href="icon-256.jpg">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    min-height: 100vh; min-height: 100dvh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 32px 22px calc(24px + env(safe-area-inset-bottom));
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #eef1ff; text-align: center;
+    background:
+      radial-gradient(ellipse 70% 45% at 12% 8%, rgba(255,120,30,.28), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 92% 30%, rgba(60,120,255,.25), transparent 70%),
+      radial-gradient(ellipse 80% 50% at 50% 105%, rgba(140,60,220,.30), transparent 70%),
+      #05060f;
+    overflow-x: hidden;
+  }
+  /* starfield: pure CSS, no images or scripts */
+  body::before, body::after {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-repeat: repeat;
+  }
+  body::before {
+    background-image:
+      radial-gradient(1.2px 1.2px at 20px 30px, #fff, transparent),
+      radial-gradient(1px 1px at 80px 120px, rgba(255,255,255,.8), transparent),
+      radial-gradient(1.4px 1.4px at 150px 60px, #fff, transparent),
+      radial-gradient(1px 1px at 200px 170px, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 60px 200px, rgba(255,255,255,.6), transparent);
+    background-size: 230px 230px; opacity: .55;
+  }
+  body::after {
+    background-image:
+      radial-gradient(1px 1px at 40px 90px, rgba(200,210,255,.9), transparent),
+      radial-gradient(1.6px 1.6px at 130px 20px, #fff, transparent),
+      radial-gradient(1px 1px at 300px 250px, rgba(255,255,255,.7), transparent);
+    background-size: 340px 340px; opacity: .45;
+  }
+  main { position: relative; z-index: 1; width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; }
+  .icon {
+    width: 148px; height: 148px; border-radius: 34px; display: block;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.12), 0 10px 40px rgba(255,110,40,.35), 0 0 60px rgba(90,120,255,.25);
+  }
+  h1 { margin: 22px 0 6px; font-size: 40px; line-height: 1.05; letter-spacing: .02em; font-weight: 800; }
+  .hook { margin: 0 0 14px; font-size: 19px; line-height: 1.35; color: #cfd6ff; max-width: 26ch; }
+  .free {
+    display: inline-block; margin: 2px 0 22px; padding: 6px 14px; border-radius: 999px;
+    font-size: 15px; font-weight: 700; letter-spacing: .03em; color: #0b1a0b;
+    background: linear-gradient(90deg, #7dffa8, #3ddc84);
+  }
+  .play { display: block; width: 100%; max-width: 330px; border-radius: 16px; -webkit-tap-highlight-color: transparent; }
+  .play img { display: block; width: 100%; height: auto; }
+  .play:active { transform: scale(.98); }
+  .play:focus-visible { outline: 3px solid #8fb1ff; outline-offset: 2px; }
+  .note { margin: 14px 0 0; font-size: 14px; color: #9aa3c7; line-height: 1.45; max-width: 32ch; }
+  .note[hidden] { display: none; }
+  footer { position: relative; z-index: 1; margin-top: 34px; font-size: 11.5px; color: #6f789c; line-height: 1.5; }
+  footer a { color: #9aa3c7; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon-256.jpg" width="148" height="148" alt="Orbit 99 game icon">
+  <h1>Orbit 99</h1>
+  <p class="hook">One ship. 99 planets.<br>How far can you orbit?</p>
+  <span class="free">Free on Android</span>
+
+  <!-- href is the plain tagged https Play URL (works everywhere, no JS needed).
+       On Android, the inline script below swaps it for an intent:// link pinned to the
+       Play Store app (com.android.vending) that carries the same referrer, with the
+       https URL as browser_fallback_url. This breaks out of in-app browsers (TikTok etc.). -->
+  <a id="get" class="play"
+     href="https://play.google.com/store/apps/details?id=com.bandolabs.orbitdrop&amp;referrer=utm_source%3Dtiktok%26utm_medium%3Dpromote%26utm_campaign%3Dtrailer_oct2026"
+     aria-label="Get Orbit 99 on Google Play">
+    <img src="google-play-badge.png" width="646" height="250" alt="Get it on Google Play">
+  </a>
+
+  <p id="ios" class="note" hidden>Orbit 99 is Android only for now. iPhone is not supported yet.</p>
+  <p id="stuck" class="note" hidden>If Google Play doesn't open, tap ⋯ at the top right and choose <b>Open in browser</b>.</p>
+  <p id="desk" class="note" hidden>On a computer? Open this page on your Android phone, or install from Google Play on the web.</p>
+</main>
+<footer>
+  © 2026 Band of Rabbits · <a href="https://arodrodriguez1222-star.github.io/orbit-drop-privacy/">Privacy policy</a><br>
+  Google Play and the Google Play logo are trademarks of Google LLC.
+</footer>
+<script>
+(function () {
+  var PKG = "com.bandolabs.orbitdrop";
+  var REF = "utm_source%3Dtiktok%26utm_medium%3Dpromote%26utm_campaign%3Dtrailer_oct2026";
+  var HTTPS = "https://play.google.com/store/apps/details?id=" + PKG + "&referrer=" + REF;
+  var ua = navigator.userAgent || "";
+  var a = document.getElementById("get");
+  if (/Android/i.test(ua)) {
+    // Same shape Google Play's own web page uses for its "See in Play Store app" button,
+    // but keeping our referrer so Play Console attributes the visit/install to the campaign.
+    a.href = "intent://play.google.com/store/apps/details?id=" + PKG + "&referrer=" + REF +
+      "#Intent;scheme=https;action=android.intent.action.VIEW;" +
+      "category=android.intent.category.BROWSABLE;package=com.android.vending;" +
+      "S.browser_fallback_url=" + encodeURIComponent(HTTPS) + ";end";
+    // In-app browser hint (TikTok/Instagram/Facebook webviews)
+    if (/; wv\)|BytedanceWebview|musical_ly|trill|TikTok|Instagram|FBAN|FBAV/i.test(ua)) {
+      document.getElementById("stuck").hidden = false;
+    }
+  } else if (/iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
+    document.getElementById("ios").hidden = false;
+  } else if (!/Mobi/i.test(ua)) {
+    document.getElementById("desk").hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
