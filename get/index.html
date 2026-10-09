@@ -89,7 +89,7 @@
        Play Store app (com.android.vending) that carries the same referrer, with the
        https URL as browser_fallback_url. This breaks out of in-app browsers (TikTok etc.). -->
   <a id="get" class="play"
-     href="https://play.google.com/store/apps/details?id=com.bandolabs.orbitdrop&amp;referrer=utm_source%3Dtiktok%26utm_medium%3Dpromote%26utm_campaign%3Dtrailer_oct2026"
+     href="https://play.google.com/store/apps/details?id=com.bandolabs.orbitdrop&amp;listing=tiktok&amp;referrer=utm_source%3Dtiktok%26utm_medium%3Dpromote%26utm_campaign%3Dtrailer_oct2026"
      aria-label="Get Orbit 99 on Google Play">
     <img src="google-play-badge.png" width="646" height="250" alt="Get it on Google Play">
   </a>
@@ -106,13 +106,13 @@
 (function () {
   var PKG = "com.bandolabs.orbitdrop";
   var REF = "utm_source%3Dtiktok%26utm_medium%3Dpromote%26utm_campaign%3Dtrailer_oct2026";
-  var HTTPS = "https://play.google.com/store/apps/details?id=" + PKG + "&referrer=" + REF;
+  var HTTPS = "https://play.google.com/store/apps/details?id=" + PKG + "&listing=tiktok&referrer=" + REF;
   var ua = navigator.userAgent || "";
   var a = document.getElementById("get");
   if (/Android/i.test(ua)) {
     // Same shape Google Play's own web page uses for its "See in Play Store app" button,
     // but keeping our referrer so Play Console attributes the visit/install to the campaign.
-    a.href = "intent://play.google.com/store/apps/details?id=" + PKG + "&referrer=" + REF +
+    a.href = "intent://play.google.com/store/apps/details?id=" + PKG + "&listing=tiktok&referrer=" + REF +
       "#Intent;scheme=https;action=android.intent.action.VIEW;" +
       "category=android.intent.category.BROWSABLE;package=com.android.vending;" +
       "S.browser_fallback_url=" + encodeURIComponent(HTTPS) + ";end";
